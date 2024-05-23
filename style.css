@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+body {
+  min-width: 375px;
+  font-family: JetBrains Mono;
+  font-weight: bold;
+  background-image: linear-gradient(to bottom, #14131b, #08070b);
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 63px 16px 64px;
+}
+
+h3 {
+  color: #817d92;
+  text-align: center;
+  font-size: 16px;
+}
+
+.input-field {
+  display: flex;
+  gap: 50px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 17px 15.5px 15px 16px;
+  background-color: #24232c;
+}
+
+.input-pass {
+  width: 250px;
+  height: 32px;
+  font-size: 18px;
+  text-align: left;
+  background-color: #24232c;
+  color: #e6e5ea;
+  border: none;
+  outline: none;
+}
+
+.copy {
+  width: 22px;
+  height: 25px;
+  /* margin-left: -150px; */
+}
+
+svg :hover {
+  cursor: pointer;
+  fill: #fff;
+}
+
+.main {
+  background-color: #24232c;
+  padding: 21px 16px 16px;
+}
+
+.character-length {
+  display: flex;
+  justify-content: space-between;
+}
+
+.character-length h3 {
+  font-size: 16px;
+  color: #e6e5ea;
+}
+
+.character-length h4 {
+  font-size: 16px;
+  color: #a4ffaf;
+}
+
+.character-liner {
+  margin-top: 23px;
+  width: 100%;
+  height: 8px;
+  appearance: none;
+  background: linear-gradient(to right, #18171f 0% 100%);
+}
+
+.character-liner::-webkit-slider-thumb {
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: #e6e5ea;
+}
+
+.character-liner::-webkit-slider-thumb:hover {
+  cursor: pointer;
+  border: 2px solid #a4ffaf;
+  background-color: #24232c;
+}
+
+.check-password,
+.check-box,
+.password-description {
+  display: flex;
+  gap: 20px;
+}
+
+.check-box,
+.password-description {
+  flex-direction: column;
+  gap: 17px;
+  margin: 33px 0 32px;
+  color: #817d92;
+}
+
+#check-uppercase,
+#check-lowercase,
+#check-number,
+#check-symbol {
+  width: 20px;
+  height: 20px;
+  color: #18171f;
+  accent-color: #a4ffaf;
+}
+
+.pass-result {
+  /* position: relative; */
+  display: flex;
+  background-color: #18171f;
+  padding: 17px 10px 18px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.strenght {
+  font-size: 18px;
+  color: #817d92;
+}
+
+.strenght-value {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.strenght-result {
+  /* position: absolute; */
+  /* display: none; */
+  top: 23px;
+  /* left: 350px; */
+  font-size: 16px;
+  color: #e6e5ea;
+}
+
+.result-boxes {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+}
+
+.box-toWeak,
+.box-weak,
+.box-medium,
+.box-strong {
+  width: 10px;
+  height: 28px;
+  background-color: none;
+  border: solid 2px #e6e5ea;
+}
+
+.tooWeak .box-toWeak {
+  background-color: #f64a4a;
+  border: none;
+}
+
+.weak .box-weak,
+.weak .box-toWeak {
+  background-color: #fb7c58;
+  border: none;
+}
+
+.medium .box-medium,
+.medium .box-weak,
+.medium .box-toWeak {
+  background-color: #f8cd65;
+  border: none;
+}
+
+.strong .box-strong,
+.strong .box-medium,
+.strong .box-weak,
+.strong .box-toWeak {
+  background-color: #a4ffaf;
+  border: none;
+}
+
+.generate {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  padding: 16px;
+  background-color: #a4ffaf;
+  gap: 16px;
+}
+
+.generate:hover {
+  cursor: pointer;
+}
+
+.generate p {
+  font-size: 16px;
+  color: #24232c;
+}
+
+/* .tooWeek .box1, .tooWeek .box2, .tooWeek .box3  {
+    background-color: none;
+}  */
+
+/* tablet */
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .container {
+    margin-bottom: 196px;
+  }
+
+  .character-length h4 {
+    font-size: 32px;
+  }
+
+  .character-length h3 {
+    font-size: 18px;
+  }
+
+  .container h3 {
+    font-size: 24px;
+  }
+
+  .input-field {
+    width: 540px;
+  }
+
+  .input-pass {
+    width: 300px;
+    font-size: 24px;
+  }
+
+  .check-box {
+    gap: 22px;
+  }
+
+  .password-description {
+    font-size: 18px;
+  }
+
+  .strenght-result {
+    font-size: 24px;
+  }
+
+  .generate p {
+    font-size: 18px;
+  }
+  .main {
+    background-color: #24232c;
+    padding: 24px 32px 32px;
+    width: 540px;
+  }
+  .strenght-result {
+    left: 350px;
+  }
+
+  .copy {
+    left: 302px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .main {
+    background-color: #24232c;
+    padding: 24px 32px 32px;
+  }
+
+  .input-pass,
+  .lenght-value {
+    font-size: 32px;
+  }
+}
